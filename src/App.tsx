@@ -1,6 +1,7 @@
 import React from 'react';
 import fotoSessao1 from './assets/foto-sessao-1.png';
 import fotoSessao2 from './assets/foto-sessao-2.png';
+import assinatura from './assets/assinatura.png';
 
 const WhatsAppIcon = () => (
   <svg
@@ -30,11 +31,11 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#FDFCF9] font-montserrat text-[#2A2A2A] overflow-hidden flex flex-col">
       {/* Hero Section */}
-      <section className="relative w-full flex-grow flex items-center min-h-[85vh]">
+      <section className="relative w-full flex-grow flex items-stretch min-h-[85vh] overflow-hidden pt-20 md:pt-0">
         {/* Background Elements */}
         <div className="absolute inset-0 z-0 flex flex-col md:flex-row">
-          <div className="w-full md:w-[55%] h-full bg-[#FDFCF9]"></div>
-          <div className="w-full md:w-[45%] h-full relative overflow-hidden">
+          <div className="w-full md:w-[65%] h-full bg-[#FDFCF9]"></div>
+          <div className="w-full md:w-[35%] h-full relative overflow-hidden">
             {/* Blurred office background */}
             <img
               src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600"
@@ -61,10 +62,10 @@ export default function App() {
           </div>
         </div>
 
-        <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10 flex flex-col md:flex-row items-center h-full py-12 md:py-0">
+        <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10 flex flex-col md:flex-row items-stretch h-full py-0">
           {/* Text Content */}
-          <div className="w-full md:w-[55%] pt-10 pb-12 md:py-20 pr-0 md:pr-12 lg:pr-20 z-20">
-            <h1 className="text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] leading-[1.2] font-normal mb-8 text-[#2A2A2A] tracking-tight">
+          <div className="w-full md:w-[65%] pt-10 pb-12 md:py-28 pr-0 md:pr-12 lg:pr-20 z-20 flex flex-col justify-center">
+            <h1 className="text-[1.75rem] md:text-[2.25rem] lg:text-[2.35rem] leading-[1.2] font-normal mb-8 text-[#2A2A2A] tracking-tight">
               Você já comprou <br className="hidden lg:block" />
               <span className="font-bold">inúmeros cursos</span> que <br className="hidden lg:block" />
               prometem faturamento? <br className="hidden lg:block" />
@@ -90,17 +91,17 @@ export default function App() {
           </div>
 
           {/* Image Content */}
-          <div className="w-full md:w-[45%] relative flex justify-center md:justify-end items-end h-[400px] md:h-[85vh] mt-10 md:mt-0">
+          <div className="w-full md:w-[35%] relative flex justify-center md:justify-end items-end mt-10 md:mt-0 min-h-[400px] md:min-h-[85vh]">
             {/* Placeholder for the cutout image */}
-            <div className="relative w-full max-w-[500px] h-full flex items-end justify-center md:justify-end">
+            <div className="relative w-full h-full flex flex-col items-center justify-end md:items-end">
               <img
                 src={fotoSessao1}
                 alt="Havilah Nasser"
-                className="object-contain object-bottom w-[80%] md:w-[90%] lg:w-[85%] h-full max-h-[450px] md:max-h-[650px] drop-shadow-2xl"
+                className="object-contain object-bottom scale-[2.2] md:scale-[2.5] origin-bottom drop-shadow-2xl translate-y-2 lg:translate-x-8"
               />
 
               {/* Circular Badge */}
-              <div className="absolute bottom-10 left-0 md:-left-16 w-32 h-32 md:w-40 md:h-40 z-30">
+              <div className="absolute bottom-20 left-0 md:-left-24 w-32 h-32 md:w-40 md:h-40 z-30">
                 <div className="relative w-full h-full animate-spin-slow opacity-60">
                   <svg viewBox="0 0 100 100" className="w-full h-full text-[#5C3922]">
                     <path
@@ -116,7 +117,7 @@ export default function App() {
                   </svg>
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="font-serif text-4xl italic text-[#5C3922] opacity-80 -mt-1">n</span>
+                  <img src={assinatura} alt="Assinatura n" className="w-12 h-12 md:w-16 md:h-16 object-contain opacity-80 mix-blend-multiply" />
                 </div>
               </div>
             </div>
@@ -129,7 +130,7 @@ export default function App() {
         <div className="flex whitespace-nowrap animate-marquee">
           {[...Array(10)].map((_, i) => (
             <div key={i} className="flex items-center mx-8 text-white/90">
-              <span className="font-serif text-3xl italic mr-6 opacity-80">n</span>
+              <img src={assinatura} alt="Assinatura" className="w-8 h-8 object-contain mr-6 opacity-80 brightness-0 invert" />
               <span className="text-lg tracking-[0.25em] font-medium">HAVILAH NASSER</span>
             </div>
           ))}
@@ -138,7 +139,7 @@ export default function App() {
         <div className="flex whitespace-nowrap animate-marquee" aria-hidden="true">
           {[...Array(10)].map((_, i) => (
             <div key={`dup-${i}`} className="flex items-center mx-8 text-white/90">
-              <span className="font-serif text-3xl italic mr-6 opacity-80">n</span>
+              <img src={assinatura} alt="Assinatura" className="w-8 h-8 object-contain mr-6 opacity-80 brightness-0 invert" />
               <span className="text-lg tracking-[0.25em] font-medium">HAVILAH NASSER</span>
             </div>
           ))}
@@ -327,7 +328,7 @@ export default function App() {
       </section>
 
       {/* Section 5: About Mentor */}
-      <section className="w-full bg-[#FDFCF9] py-20 md:py-28 px-6 md:px-12 lg:px-24 relative overflow-hidden">
+      <section className="w-full bg-[#FDFCF9] pt-20 md:pt-28 px-6 md:px-12 lg:px-24 relative overflow-hidden flex items-end min-h-[600px] md:min-h-[700px]">
         {/* Abstract Background Shapes */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <svg className="absolute right-0 top-0 w-full h-full text-[#D4C5B9] opacity-40" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -335,9 +336,9 @@ export default function App() {
           </svg>
         </div>
 
-        <div className="container mx-auto max-w-6xl relative z-10 flex flex-col md:flex-row items-center">
+        <div className="container mx-auto max-w-6xl relative z-10 flex flex-col md:flex-row items-stretch h-full w-full">
           {/* Text Content */}
-          <div className="w-full md:w-1/2 pr-0 md:pr-12 lg:pr-20 mb-12 md:mb-0">
+          <div className="w-full md:w-1/2 pr-0 md:pr-12 lg:pr-20 mb-12 md:mb-0 pb-16 md:pb-32 flex flex-col justify-center">
             <p className="text-[#A66B4A] text-lg mb-2">Eu serei a sua mentora</p>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif italic text-[#A66B4A] mb-2">
               Havilah Nasser
@@ -368,32 +369,34 @@ export default function App() {
           </div>
 
           {/* Image Content */}
-          <div className="w-full md:w-1/2 relative flex justify-center items-end h-[500px] md:h-[700px]">
+          <div className="w-full md:w-1/2 relative flex justify-center items-end mt-10 md:mt-0 min-h-[400px]">
             {/* Cutout Image */}
-            <img
-              src={fotoSessao2}
-              alt="Havilah Nasser"
-              className="object-contain object-bottom w-[80%] md:w-[90%] lg:w-[85%] h-full max-h-[450px] md:max-h-[600px] drop-shadow-2xl relative z-20"
-            />
+            <div className="relative w-full h-full flex flex-col items-center justify-end md:items-end">
+              <img
+                src={fotoSessao2}
+                alt="Havilah Nasser"
+                className="object-contain object-bottom scale-[2.2] md:scale-[2.5] origin-bottom drop-shadow-2xl relative z-20 translate-y-2 lg:translate-x-12"
+              />
 
-            {/* Circular Badge - Positioned on the left of the image */}
-            <div className="absolute top-1/3 left-0 md:-left-10 w-32 h-32 md:w-40 md:h-40 z-30 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 shadow-lg">
-              <div className="relative w-full h-full animate-spin-slow opacity-80">
-                <svg viewBox="0 0 100 100" className="w-full h-full text-[#A66B4A]">
-                  <path
-                    id="circlePath2"
-                    d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
-                    fill="none"
-                  />
-                  <text fontSize="9" letterSpacing="2.5" fontWeight="600" fill="currentColor">
-                    <textPath href="#circlePath2" startOffset="0%">
-                      HAVILAH NASSER • HAVILAH NASSER •
-                    </textPath>
-                  </text>
-                </svg>
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="font-serif text-4xl italic text-[#A66B4A] opacity-90 -mt-1">n</span>
+              {/* Circular Badge - Positioned on the left of the image */}
+              <div className="absolute bottom-32 left-0 md:-left-16 w-32 h-32 md:w-40 md:h-40 z-30 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 shadow-lg">
+                <div className="relative w-full h-full animate-spin-slow opacity-80">
+                  <svg viewBox="0 0 100 100" className="w-full h-full text-[#A66B4A]">
+                    <path
+                      id="circlePath2"
+                      d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+                      fill="none"
+                    />
+                    <text fontSize="9" letterSpacing="2.5" fontWeight="600" fill="currentColor">
+                      <textPath href="#circlePath2" startOffset="0%">
+                        HAVILAH NASSER • HAVILAH NASSER •
+                      </textPath>
+                    </text>
+                  </svg>
+                </div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <img src={assinatura} alt="Assinatura n" className="w-12 h-12 md:w-16 md:h-16 object-contain opacity-90 mix-blend-multiply" />
+                </div>
               </div>
             </div>
           </div>
