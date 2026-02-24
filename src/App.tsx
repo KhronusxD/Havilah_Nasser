@@ -1,0 +1,571 @@
+import React from 'react';
+
+const WhatsAppIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="22"
+    height="22"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="ml-2"
+  >
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+  </svg>
+);
+
+const LogoN = () => (
+  <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 80 C 20 50, 40 20, 60 20 C 80 20, 80 50, 80 80" stroke="currentColor" strokeWidth="4" strokeLinecap="round" fill="none" />
+    <path d="M20 80 L 20 20" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
+  </svg>
+);
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-[#FDFCF9] font-montserrat text-[#2A2A2A] overflow-hidden flex flex-col">
+      {/* Hero Section */}
+      <section className="relative w-full flex-grow flex items-center min-h-[85vh]">
+        {/* Background Elements */}
+        <div className="absolute inset-0 z-0 flex flex-col md:flex-row">
+          <div className="w-full md:w-[55%] h-full bg-[#FDFCF9]"></div>
+          <div className="w-full md:w-[45%] h-full relative overflow-hidden">
+            {/* Blurred office background */}
+            <img
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600"
+              alt="Office Background"
+              className="absolute inset-0 w-full h-full object-cover opacity-20 blur-sm mix-blend-multiply"
+              referrerPolicy="no-referrer"
+            />
+            {/* Abstract curved line */}
+            <svg
+              className="absolute inset-0 w-full h-full text-[#D4C5B9] opacity-60"
+              viewBox="0 0 100 100"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M-20,80 Q30,20 70,60 T120,20"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="0.5"
+              />
+            </svg>
+            {/* Diagonal overlay to blend */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#FDFCF9] via-[#FDFCF9]/80 to-transparent w-[150%] -left-[50%] skew-x-[-15deg] hidden md:block"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-[#FDFCF9] via-[#FDFCF9]/80 to-transparent h-[150%] -top-[50%] block md:hidden"></div>
+          </div>
+        </div>
+
+        <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10 flex flex-col md:flex-row items-center h-full py-12 md:py-0">
+          {/* Text Content */}
+          <div className="w-full md:w-[55%] pt-10 pb-12 md:py-20 pr-0 md:pr-12 lg:pr-20 z-20">
+            <h1 className="text-[2rem] md:text-[2.5rem] lg:text-[3.2rem] leading-[1.15] font-normal mb-8 text-[#2A2A2A] tracking-tight">
+              Você já comprou <br className="hidden lg:block" />
+              <span className="font-bold">inúmeros cursos</span> que <br className="hidden lg:block" />
+              prometem faturamento? <br className="hidden lg:block" />
+              Você se <span className="font-bold">sente inseguro</span> <br className="hidden lg:block" />
+              ao atender clientes <span className="font-bold">e sem</span> <br className="hidden lg:block" />
+              <span className="font-bold">controle</span> da rotina do <br className="hidden lg:block" />
+              escritório?
+            </h1>
+
+            <p className="text-base md:text-[1.1rem] mb-10 text-[#4A4A4A] max-w-[480px] leading-relaxed">
+              Não é normal se sentir assim. <br />
+              <span className="font-bold text-[#2A2A2A]">O problema</span> não é o seu conhecimento <br className="hidden md:block" />
+              jurídico — <span className="font-bold text-[#2A2A2A]">
+                é a ausência de método <br className="hidden md:block" />
+                claro e sustentável..
+              </span>
+            </p>
+
+            <button className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] to-[#5C3922] hover:from-[#8E5B3F] hover:to-[#4A2D1A] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
+              <span>Entre em contato</span>
+              <WhatsAppIcon />
+            </button>
+          </div>
+
+          {/* Image Content */}
+          <div className="w-full md:w-[45%] relative flex justify-center md:justify-end items-end h-[400px] md:h-[85vh] mt-10 md:mt-0">
+            {/* Placeholder for the cutout image */}
+            <div className="relative w-full max-w-[500px] h-full flex items-end justify-center md:justify-end">
+              <img
+                src="https://raw.githubusercontent.com/stackblitz/stackblitz-images/main/havilah-1.png"
+                alt="Havilah Nasser"
+                className="object-contain object-bottom w-[90%] md:w-full h-full max-h-[600px] md:max-h-[800px] drop-shadow-2xl"
+                referrerPolicy="no-referrer"
+              />
+
+              {/* Circular Badge */}
+              <div className="absolute bottom-10 left-0 md:-left-16 w-32 h-32 md:w-40 md:h-40 z-30">
+                <div className="relative w-full h-full animate-spin-slow opacity-60">
+                  <svg viewBox="0 0 100 100" className="w-full h-full text-[#5C3922]">
+                    <path
+                      id="circlePath"
+                      d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+                      fill="none"
+                    />
+                    <text fontSize="9" letterSpacing="2.5" fontWeight="600" fill="currentColor">
+                      <textPath href="#circlePath" startOffset="0%">
+                        HAVILAH NASSER • HAVILAH NASSER •
+                      </textPath>
+                    </text>
+                  </svg>
+                </div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="font-serif text-4xl italic text-[#5C3922] opacity-80 -mt-1">n</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Marquee Section */}
+      <div className="w-full bg-gradient-to-r from-[#8E5B3F] via-[#6B442E] to-[#4A2D1A] py-5 overflow-hidden flex relative z-20">
+        <div className="flex whitespace-nowrap animate-marquee">
+          {[...Array(10)].map((_, i) => (
+            <div key={i} className="flex items-center mx-8 text-white/90">
+              <span className="font-serif text-3xl italic mr-6 opacity-80">n</span>
+              <span className="text-lg tracking-[0.25em] font-medium">HAVILAH NASSER</span>
+            </div>
+          ))}
+        </div>
+        {/* Duplicate for seamless loop */}
+        <div className="flex whitespace-nowrap animate-marquee" aria-hidden="true">
+          {[...Array(10)].map((_, i) => (
+            <div key={`dup-${i}`} className="flex items-center mx-8 text-white/90">
+              <span className="font-serif text-3xl italic mr-6 opacity-80">n</span>
+              <span className="text-lg tracking-[0.25em] font-medium">HAVILAH NASSER</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Section 2: O Problema */}
+      <section className="w-full bg-white py-20 md:py-28 px-6 md:px-12 lg:px-24">
+        <div className="container mx-auto max-w-5xl">
+          {/* Overline */}
+          <div className="flex items-center justify-center mb-8">
+            <div className="h-px bg-[#A66B4A] w-12 opacity-40"></div>
+            <span className="mx-4 text-[#A66B4A] uppercase tracking-widest text-sm font-medium">O problema</span>
+            <div className="h-px bg-[#A66B4A] w-12 opacity-40"></div>
+          </div>
+
+          {/* Main Heading */}
+          <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] text-center text-[#A66B4A] font-medium mb-16 leading-[1.3]">
+            Em um dia você está na faculdade <br className="hidden md:block" />
+            No outro é jogado no mercado
+          </h2>
+
+          {/* Grid of 6 items */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 max-w-4xl mx-auto mb-20">
+            {[
+              "Sem saber se posicionar.",
+              "Sem saber conduzir atendimentos.",
+              "Sem saber precificar.",
+              "Sem saber gerir sua equipe.",
+              "Sem saber organizar a rotina.",
+              "Sem saber definir prioridades."
+            ].map((item, index) => (
+              <div key={index} className="flex items-center bg-gradient-to-r from-white to-gray-50/30 py-3 px-6 rounded-sm shadow-[0_2px_15px_rgba(0,0,0,0.03)] border border-gray-100/50">
+                <span className="text-[#2A2A2A] font-bold mr-4 text-lg leading-none">×</span>
+                <span className="text-[#4A4A4A]">{item}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Paragraph */}
+          <p className="text-center text-[#4A4A4A] max-w-3xl mx-auto mb-20 leading-relaxed text-lg">
+            O problema não é falta de conhecimento jurídico.<br className="hidden md:block" />
+            É a ausência de um método claro, aplicado à prática profissional, que organize o<br className="hidden md:block" />
+            atendimento, o fechamento de contratos e a rotina — e permita crescimento com<br className="hidden md:block" />
+            consistência.
+          </p>
+
+          {/* Sub-heading */}
+          <h3 className="text-3xl lg:text-4xl font-bold text-center text-[#A66B4A] mb-20">
+            Você sente
+          </h3>
+
+          {/* Three Columns */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+            {/* Vertical Dividers for Desktop */}
+            <div className="hidden md:block absolute top-0 bottom-0 left-[33.33%] w-px bg-gray-200"></div>
+            <div className="hidden md:block absolute top-0 bottom-0 right-[33.33%] w-px bg-gray-200"></div>
+
+            {/* Column 1 */}
+            <div className="flex flex-col items-center text-center px-4">
+              <div className="mb-8 h-16 flex items-center justify-center">
+                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#2A2A2A" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="9" cy="9" r="4" />
+                  <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
+                  <path d="M21 10c0 2.2-2.2 4-5 4-.5 0-1-.1-1.5-.2l-2.5 1 .5-2A4.5 4.5 0 0 1 11 10c0-2.2 2.2-4 5-4s5 1.8 5 4z" />
+                </svg>
+              </div>
+              <h4 className="text-[#A66B4A] font-medium text-lg mb-4">No atendimento</h4>
+              <p className="text-[#4A4A4A] leading-relaxed">
+                Insegurança na condução.<br />
+                Atendimentos inconsistentes e<br />
+                sem um padrão claro.
+              </p>
+            </div>
+
+            {/* Column 2 */}
+            <div className="flex flex-col items-center text-center px-4">
+              <div className="mb-8 h-16 flex items-center justify-center">
+                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#2A2A2A" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                  <polyline points="14 2 14 8 20 8" />
+                  <line x1="8" y1="13" x2="16" y2="13" />
+                  <line x1="8" y1="17" x2="12" y2="17" />
+                  <line x1="8" y1="9" x2="10" y2="9" />
+                  <circle cx="17" cy="17" r="5" fill="white" />
+                  <path d="M15 17l1.5 1.5 2.5-2.5" />
+                </svg>
+              </div>
+              <h4 className="text-[#A66B4A] font-medium text-lg mb-4">No fechamento de contratos</h4>
+              <p className="text-[#4A4A4A] leading-relaxed">
+                Dificuldade na apresentação<br />
+                dos honorários.<br />
+                Perda de firmeza na proposta.
+              </p>
+            </div>
+
+            {/* Column 3 */}
+            <div className="flex flex-col items-center text-center px-4">
+              <div className="mb-8 h-16 flex items-center justify-center">
+                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#2A2A2A" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                  <rect x="7" y="13" width="2" height="2" />
+                  <rect x="11" y="13" width="2" height="2" />
+                  <rect x="15" y="13" width="2" height="2" />
+                  <rect x="7" y="17" width="2" height="2" />
+                  <rect x="11" y="17" width="2" height="2" />
+                </svg>
+              </div>
+              <h4 className="text-[#A66B4A] font-medium text-lg mb-4">Na rotina</h4>
+              <p className="text-[#4A4A4A] leading-relaxed">
+                Atuação reativa.<br />
+                Retrabalho, prazos perdidos e<br />
+                ausência de evolução.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3: Infelizmente... */}
+      <section className="w-full bg-gradient-to-r from-[#8E5B3F] to-[#4A2D1A] py-20 px-6 md:px-12 lg:px-24 text-white text-center">
+        <div className="container mx-auto max-w-4xl">
+          <div className="h-px bg-white/30 w-16 mx-auto mb-8"></div>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 leading-tight">
+            Infelizmente isso é mais comum do que parece.<br className="hidden md:block" />
+            E eu já me senti assim.
+          </h2>
+          <p className="text-lg md:text-xl font-light italic text-white/90 leading-relaxed max-w-3xl mx-auto">
+            "Eu sei todas as leis desse processo, tenho experiência, mas me perco com os clientes e no dia a dia do escritório."
+          </p>
+        </div>
+      </section>
+
+      {/* Section 4: A solução */}
+      <section className="w-full relative py-20 md:py-28 px-6 md:px-12 lg:px-24">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=1600"
+            alt="Law Office Background"
+            className="w-full h-full object-cover opacity-10"
+            referrerPolicy="no-referrer"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#FDFCF9]/90 via-[#FDFCF9]/80 to-[#FDFCF9]/90"></div>
+        </div>
+
+        <div className="container mx-auto max-w-4xl relative z-10">
+          <div className="h-px bg-[#A66B4A] w-16 mx-auto mb-8 opacity-40"></div>
+          
+          <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] text-center text-[#A66B4A] font-bold mb-6 leading-tight">
+            A solução não é mais conteúdo.<br />
+            É ter um método claro e eficiente que se sustente a longo prazo.
+          </h2>
+          
+          <p className="text-center text-[#4A4A4A] text-lg mb-16">
+            Tenha acesso a uma mentoria online e individual, voltada à prática jurídica, que vai:
+          </p>
+
+          <div className="flex flex-col gap-4 max-w-3xl mx-auto mb-16">
+            {[
+              "Organizar decisões e critérios.",
+              "Estruturar atendimento, fechamento e rotina.",
+              "Respeitar os limites éticos da advocacia.",
+              "Se adaptar à realidade de cada escritório.",
+              "Orientar condutas com responsabilidade."
+            ].map((item, index) => (
+              <div 
+                key={index} 
+                className="bg-gradient-to-r from-[#A66B4A] to-[#4A2D1A] text-white text-center py-5 px-6 rounded-xl text-lg md:text-xl font-medium shadow-md"
+              >
+                {item}
+              </div>
+            ))}
+          </div>
+
+          <div className="flex justify-center">
+            <button className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] to-[#5C3922] hover:from-[#8E5B3F] hover:to-[#4A2D1A] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base border border-white/20">
+              <span>Entre em contato</span>
+              <WhatsAppIcon />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 5: About Mentor */}
+      <section className="w-full bg-[#FDFCF9] py-20 md:py-28 px-6 md:px-12 lg:px-24 relative overflow-hidden">
+        {/* Abstract Background Shapes */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <svg className="absolute right-0 top-0 w-full h-full text-[#D4C5B9] opacity-40" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path d="M50,0 Q100,50 50,100 T50,0" fill="currentColor" />
+          </svg>
+        </div>
+
+        <div className="container mx-auto max-w-6xl relative z-10 flex flex-col md:flex-row items-center">
+          {/* Text Content */}
+          <div className="w-full md:w-1/2 pr-0 md:pr-12 lg:pr-20 mb-12 md:mb-0">
+            <p className="text-[#A66B4A] text-lg mb-2">Eu serei a sua mentora</p>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif italic text-[#A66B4A] mb-2">
+              Havilah Nasser
+            </h2>
+            <p className="text-[#A66B4A] text-lg mb-10 tracking-wider">OAB/AM nº 16.377</p>
+
+            <div className="text-[#4A4A4A] text-lg leading-relaxed space-y-6 mb-10">
+              <p>
+                <span className="font-bold text-[#2A2A2A]">Advogada, formada em Direito pela</span> Universidade<br className="hidden lg:block" />
+                do Estado do Amazonas, <span className="font-bold text-[#2A2A2A]">especialista em Direito<br className="hidden lg:block" />
+                Público e Previdenciário,</span> atuo à frente de um<br className="hidden lg:block" />
+                escritório jurídico com <span className="font-bold text-[#2A2A2A]">mais de 20 colaboradores,</span><br className="hidden lg:block" />
+                lidando diariamente com a condução de clientes,<br className="hidden lg:block" />
+                equipes e a rotina operacional do escritório.
+              </p>
+              <p>
+                Essa vivência prática é o que fundamenta o<br className="hidden lg:block" />
+                método aplicado na mentoria, sempre com foco<br className="hidden lg:block" />
+                em <span className="font-bold text-[#2A2A2A]">clareza na comunicação, organização dos<br className="hidden lg:block" />
+                processos e postura ética na advocacia.</span>
+              </p>
+            </div>
+
+            <button className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] to-[#5C3922] hover:from-[#8E5B3F] hover:to-[#4A2D1A] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
+              <span>Entre em contato</span>
+              <WhatsAppIcon />
+            </button>
+          </div>
+
+          {/* Image Content */}
+          <div className="w-full md:w-1/2 relative flex justify-center items-end h-[500px] md:h-[700px]">
+            {/* Cutout Image */}
+            <img
+              src="https://raw.githubusercontent.com/stackblitz/stackblitz-images/main/havilah-2.png"
+              alt="Havilah Nasser"
+              className="object-contain object-bottom w-[90%] md:w-full h-full max-h-[700px] drop-shadow-2xl relative z-20"
+              referrerPolicy="no-referrer"
+            />
+
+            {/* Circular Badge - Positioned on the left of the image */}
+            <div className="absolute top-1/3 left-0 md:-left-10 w-32 h-32 md:w-40 md:h-40 z-30 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 shadow-lg">
+              <div className="relative w-full h-full animate-spin-slow opacity-80">
+                <svg viewBox="0 0 100 100" className="w-full h-full text-[#A66B4A]">
+                  <path
+                    id="circlePath2"
+                    d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+                    fill="none"
+                  />
+                  <text fontSize="9" letterSpacing="2.5" fontWeight="600" fill="currentColor">
+                    <textPath href="#circlePath2" startOffset="0%">
+                      HAVILAH NASSER • HAVILAH NASSER •
+                    </textPath>
+                  </text>
+                </svg>
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="font-serif text-4xl italic text-[#A66B4A] opacity-90 -mt-1">n</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 6: O Método */}
+      <section className="w-full bg-[#F4F3F0] py-20 md:py-28 px-6 md:px-12 lg:px-24">
+        <div className="container mx-auto max-w-6xl">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <div className="h-px bg-[#A66B4A] w-16 mx-auto mb-8 opacity-40"></div>
+            <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-[#A66B4A] mb-4">
+              O método é estruturado em duas mentorias.
+            </h2>
+            <p className="text-lg md:text-xl text-[#4A4A4A]">
+              A mentoria trabalha dois eixos complementares:
+            </p>
+          </div>
+
+          {/* Cards Container */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            {/* Card 1 */}
+            <div className="bg-white rounded-xl p-8 md:p-12 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100">
+              <p className="text-xs font-bold tracking-[0.2em] text-[#8E5B3F] uppercase mb-4">
+                Mentoria 1
+              </p>
+              <h3 className="text-2xl font-bold text-[#A66B4A] mb-6">
+                Atendimento e Fechamento de contrato
+              </h3>
+              <p className="text-[#4A4A4A] mb-8 leading-relaxed">
+                Um método estruturado para conduzir atendimentos com segurança e fechar contratos de forma ética e consciente.
+              </p>
+              
+              <div className="h-px w-full bg-gray-100 mb-8"></div>
+              
+              <ul className="space-y-6">
+                {[
+                  "Organização do atendimento do início ao fim",
+                  "Clareza na explicação de estratégia, riscos e próximos passos",
+                  "Segurança ao tratar honorários, escopo e contratos",
+                  "Critérios objetivos para apresentação de propostas",
+                  "Fechamento ético, organizado e consciente",
+                  "Posicionamento do serviço sem confronto ou improviso"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#A66B4A] mt-2.5 mr-4 flex-shrink-0 opacity-60"></span>
+                    <span className="text-[#4A4A4A] leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white rounded-xl p-8 md:p-12 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100">
+              <p className="text-xs font-bold tracking-[0.2em] text-[#8E5B3F] uppercase mb-4">
+                Mentoria 2
+              </p>
+              <h3 className="text-2xl font-bold text-[#A66B4A] mb-6">
+                Operacional e Gestão
+              </h3>
+              <p className="text-[#4A4A4A] mb-8 leading-relaxed">
+                Construção de uma prática jurídica estável, previsível e funcional.
+              </p>
+              
+              <div className="h-px w-full bg-gray-100 mb-8"></div>
+              
+              <ul className="space-y-6">
+                {[
+                  "Fluxo de trabalho após o fechamento do contrato",
+                  "Estruturação operacional do escritório",
+                  "Definição clara de papéis e responsabilidades",
+                  "Redução de retrabalho e falhas operacionais",
+                  "Integração entre atendimento, execução e pós-contrato",
+                  "Construção de uma rotina previsível e sustentável"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#A66B4A] mt-2.5 mr-4 flex-shrink-0 opacity-60"></span>
+                    <span className="text-[#4A4A4A] leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="flex justify-center">
+            <button className="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] to-[#5C3922] hover:from-[#8E5B3F] hover:to-[#4A2D1A] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
+              <span>Entre em contato</span>
+              <WhatsAppIcon />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 7: Testimonials */}
+      <section className="w-full bg-[#F4F3F0] py-20 md:py-28 px-6 md:px-12 lg:px-24">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-[#A66B4A] mb-4 leading-tight">
+              Alguns depoimentos que recebemos<br className="hidden md:block" />
+              diariamente de nossos clientes no escritório.
+            </h2>
+            <p className="text-lg md:text-xl text-[#4A4A4A]">
+              Experiências reais de clientes que vivenciaram o método na prática.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Testimonial 1 */}
+            <div className="bg-white p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col">
+              <div className="w-16 h-16 bg-gray-200 rounded-lg mb-6"></div>
+              <p className="font-medium text-[#2A2A2A] mb-2">Nome cliente</p>
+              <div className="flex text-[#D48B25] mb-6">
+                {"★★★★★".split("").map((star, i) => (
+                  <span key={i} className="text-xl">{star}</span>
+                ))}
+              </div>
+              <p className="text-[#4A4A4A] leading-relaxed flex-grow">
+                Doutora, só tenho a agradecer, tanto a Deus quanto à senhora, por toda a dedicação que a senhora tem com as pessoas. Que Deus abençoe a senhora e toda a sua família.
+              </p>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div className="bg-white p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col">
+              <div className="w-16 h-16 bg-gray-200 rounded-lg mb-6"></div>
+              <p className="font-medium text-[#2A2A2A] mb-2">Nome cliente</p>
+              <div className="flex text-[#D48B25] mb-6">
+                {"★★★★★".split("").map((star, i) => (
+                  <span key={i} className="text-xl">{star}</span>
+                ))}
+              </div>
+              <p className="text-[#4A4A4A] leading-relaxed flex-grow">
+                Os melhores advogados que já conheci. Gratidão por fazerem parte da minha vida. Minha Dra. linda, amo muito vocês ❤️
+              </p>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div className="bg-white p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col">
+              <div className="w-16 h-16 bg-gray-200 rounded-lg mb-6"></div>
+              <p className="font-medium text-[#2A2A2A] mb-2">Nome cliente</p>
+              <div className="flex text-[#D48B25] mb-6">
+                {"★★★★★".split("").map((star, i) => (
+                  <span key={i} className="text-xl">{star}</span>
+                ))}
+              </div>
+              <p className="text-[#4A4A4A] leading-relaxed flex-grow">
+                A senhora merece todo o nosso carinho, doutora. Agradecemos a Deus por ter você ao nosso lado.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 8: Final CTA */}
+      <section className="w-full bg-[#FDFCF9] py-20 md:py-32 px-6 md:px-12 lg:px-24">
+        <div className="container mx-auto max-w-5xl text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-[2.8rem] font-bold text-[#A66B4A] mb-8 leading-tight">
+            Pronto para parar de improvisar e começar a conduzir<br className="hidden lg:block" />
+            sua carreira com clareza e eficiência?
+          </h2>
+          
+          <p className="text-lg md:text-xl text-[#4A4A4A] mb-16 leading-relaxed max-w-4xl mx-auto">
+            Se você já se cansou de bater cabeça tentando encontrar um caminho para resolver esses problemas, entre em contato comigo para mais detalhes da mentoria e dar um passo seguro na sua trajetória jurídica.
+          </p>
+          
+          <button className="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] to-[#5C3922] hover:from-[#8E5B3F] hover:to-[#4A2D1A] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
+            <span>Entre em contato</span>
+            <WhatsAppIcon />
+          </button>
+        </div>
+      </section>
+    </div>
+  );
+}
