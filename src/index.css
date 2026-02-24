@@ -12,6 +12,10 @@
   .animate-spin-slow {
     animation: spin 20s linear infinite;
   }
+  .animate-gradient {
+    animation: gradient-xy 4s ease infinite;
+    background-size: 200% 200%;
+  }
 }
 
 @keyframes marquee {
@@ -20,5 +24,14 @@
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@keyframes gradient-xy {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
 }

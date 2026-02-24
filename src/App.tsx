@@ -110,7 +110,7 @@ export default function App() {
             </motion.p>
 
             <motion.div variants={fadeInUp} className="w-full sm:w-max">
-              <button className="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] to-[#5C3922] hover:from-[#8E5B3F] hover:to-[#4A2D1A] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
+              <button className="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] via-[#5C3922] to-[#A66B4A] animate-gradient transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
                 <span>Entre em contato</span>
                 <WhatsAppIcon />
               </button>
@@ -366,7 +366,7 @@ export default function App() {
           </motion.div>
 
           <motion.div variants={fadeInUp} className="flex justify-center">
-            <button className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] to-[#5C3922] hover:from-[#8E5B3F] hover:to-[#4A2D1A] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base border border-white/20">
+            <button className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] via-[#5C3922] to-[#A66B4A] animate-gradient transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base border border-white/20">
               <span>Entre em contato</span>
               <WhatsAppIcon />
             </button>
@@ -382,13 +382,6 @@ export default function App() {
         viewport={{ once: true, amount: 0.2 }}
         variants={staggerContainer}
       >
-        {/* Abstract Background Shapes */}
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          <svg className="absolute right-0 top-0 w-full h-full text-[#D4C5B9] opacity-40" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <path d="M50,0 Q100,50 50,100 T50,0" fill="currentColor" />
-          </svg>
-        </div>
-
         <motion.div
           className="container mx-auto max-w-6xl relative z-10 flex flex-col md:flex-row items-stretch h-full w-full"
           initial="hidden"
@@ -427,7 +420,7 @@ export default function App() {
             </motion.div>
 
             <motion.div variants={fadeInUp}>
-              <button className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] to-[#5C3922] hover:from-[#8E5B3F] hover:to-[#4A2D1A] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
+              <button className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] via-[#5C3922] to-[#A66B4A] animate-gradient transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
                 <span>Entre em contato</span>
                 <WhatsAppIcon />
               </button>
@@ -562,7 +555,7 @@ export default function App() {
 
           {/* CTA Button */}
           <motion.div variants={fadeInUp} className="flex justify-center">
-            <button className="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] to-[#5C3922] hover:from-[#8E5B3F] hover:to-[#4A2D1A] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
+            <button className="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] via-[#5C3922] to-[#A66B4A] animate-gradient transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
               <span>Entre em contato</span>
               <WhatsAppIcon />
             </button>
@@ -581,8 +574,7 @@ export default function App() {
         >
           <motion.div variants={fadeInUp} className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-[#A66B4A] mb-4 leading-tight">
-              Alguns depoimentos que recebemos<br className="hidden md:block" />
-              diariamente de nossos clientes no escritório.
+              Alguns depoimentos que recebemos diariamente de nossos clientes no escritório.
             </h2>
             <p className="text-lg md:text-xl text-[#4A4A4A]">
               Experiências reais de clientes que vivenciaram o método na prática.
@@ -659,7 +651,7 @@ export default function App() {
           </motion.p>
 
           <motion.div variants={fadeInUp}>
-            <button className="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] to-[#5C3922] hover:from-[#8E5B3F] hover:to-[#4A2D1A] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
+            <button className="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] via-[#5C3922] to-[#A66B4A] animate-gradient transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
               <span>Entre em contato</span>
               <WhatsAppIcon />
             </button>
