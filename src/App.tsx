@@ -97,7 +97,7 @@ export default function App() {
               <img
                 src={fotoSessao1}
                 alt="Havilah Nasser"
-                className="object-contain object-bottom scale-[2.2] md:scale-[2.5] origin-bottom drop-shadow-2xl translate-y-2 lg:translate-x-8"
+                className="object-contain object-bottom scale-[1.5] md:scale-[1.75] origin-bottom drop-shadow-2xl translate-y-2 lg:translate-x-8"
               />
 
               {/* Circular Badge */}
@@ -375,7 +375,7 @@ export default function App() {
               <img
                 src={fotoSessao2}
                 alt="Havilah Nasser"
-                className="object-contain object-bottom scale-[2.2] md:scale-[2.5] origin-bottom drop-shadow-2xl relative z-20 translate-y-2 lg:translate-x-12"
+                className="object-contain object-bottom scale-[1.3] md:scale-[1.5] origin-bottom drop-shadow-2xl relative z-20 translate-y-2 lg:translate-x-12"
               />
 
               {/* Circular Badge - Positioned on the left of the image */}
