@@ -1,7 +1,23 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import fotoSessao1 from './assets/foto-sessao-1.png';
 import fotoSessao2 from './assets/foto-sessao-2.png';
 import assinatura from './assets/assinatura.png';
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+};
 
 const WhatsAppIcon = () => (
   <svg
@@ -64,8 +80,17 @@ export default function App() {
 
         <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10 flex flex-col md:flex-row items-stretch h-full py-0">
           {/* Text Content */}
-          <div className="w-full md:w-[65%] pt-10 pb-12 md:py-28 pr-0 md:pr-12 lg:pr-20 z-20 flex flex-col justify-center">
-            <h1 className="text-[1.75rem] md:text-[2.25rem] lg:text-[2.35rem] leading-[1.2] font-normal mb-8 text-[#2A2A2A] tracking-tight">
+          <motion.div
+            className="w-full md:w-[65%] pt-10 pb-12 md:py-28 pr-0 md:pr-12 lg:pr-20 z-20 flex flex-col justify-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
+          >
+            <motion.h1
+              variants={fadeInUp}
+              className="text-[1.75rem] md:text-[2.25rem] lg:text-[2.35rem] leading-[1.2] font-normal mb-8 text-[#2A2A2A] tracking-tight"
+            >
               Você já comprou <br className="hidden lg:block" />
               <span className="font-bold">inúmeros cursos</span> que <br className="hidden lg:block" />
               prometem faturamento? <br className="hidden lg:block" />
@@ -73,25 +98,33 @@ export default function App() {
               ao atender clientes <span className="font-bold">e sem</span> <br className="hidden lg:block" />
               <span className="font-bold">controle</span> da rotina do <br className="hidden lg:block" />
               escritório?
-            </h1>
+            </motion.h1>
 
-            <p className="text-base md:text-[1.1rem] mb-10 text-[#4A4A4A] max-w-[480px] leading-relaxed">
+            <motion.p variants={fadeInUp} className="text-base md:text-[1.1rem] mb-10 text-[#4A4A4A] max-w-[480px] leading-relaxed">
               Não é normal se sentir assim. <br />
               <span className="font-bold text-[#2A2A2A]">O problema</span> não é o seu conhecimento <br className="hidden md:block" />
               jurídico — <span className="font-bold text-[#2A2A2A]">
                 é a ausência de método <br className="hidden md:block" />
                 claro e sustentável.
               </span>
-            </p>
+            </motion.p>
 
-            <button className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] to-[#5C3922] hover:from-[#8E5B3F] hover:to-[#4A2D1A] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
-              <span>Entre em contato</span>
-              <WhatsAppIcon />
-            </button>
-          </div>
+            <motion.div variants={fadeInUp} className="w-full sm:w-max">
+              <button className="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] to-[#5C3922] hover:from-[#8E5B3F] hover:to-[#4A2D1A] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
+                <span>Entre em contato</span>
+                <WhatsAppIcon />
+              </button>
+            </motion.div>
+          </motion.div>
 
           {/* Image Content */}
-          <div className="w-full md:w-[35%] relative flex justify-center md:justify-end items-end mt-10 md:mt-0 min-h-[400px] md:min-h-[85vh]">
+          <motion.div
+            className="w-full md:w-[35%] relative flex justify-center md:justify-end items-end mt-10 md:mt-0 min-h-[400px] md:min-h-[85vh]"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          >
             {/* Placeholder for the cutout image */}
             <div className="relative w-full h-full flex flex-col items-center justify-end md:items-end">
               <img
@@ -121,7 +154,7 @@ export default function App() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -147,23 +180,29 @@ export default function App() {
       </div>
 
       {/* Section 2: O Problema */}
-      <section className="w-full bg-white py-20 md:py-28 px-6 md:px-12 lg:px-24">
-        <div className="container mx-auto max-w-5xl">
+      <section className="w-full bg-white py-20 md:py-28 px-6 md:px-12 lg:px-24 overflow-hidden">
+        <motion.div
+          className="container mx-auto max-w-5xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={staggerContainer}
+        >
           {/* Overline */}
-          <div className="flex items-center justify-center mb-8">
+          <motion.div variants={fadeInUp} className="flex items-center justify-center mb-8">
             <div className="h-px bg-[#A66B4A] w-12 opacity-40"></div>
             <span className="mx-4 text-[#A66B4A] uppercase tracking-widest text-sm font-medium">O problema</span>
             <div className="h-px bg-[#A66B4A] w-12 opacity-40"></div>
-          </div>
+          </motion.div>
 
           {/* Main Heading */}
-          <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] text-center text-[#A66B4A] font-medium mb-16 leading-[1.3]">
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl lg:text-[2.5rem] text-center text-[#A66B4A] font-medium mb-16 leading-[1.3]">
             Em um dia você está na faculdade <br className="hidden md:block" />
             No outro é jogado no mercado
-          </h2>
+          </motion.h2>
 
           {/* Grid of 6 items */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 max-w-4xl mx-auto mb-20">
+          <motion.div variants={fadeInUp} className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 max-w-4xl mx-auto mb-20">
             {[
               "Sem saber se posicionar.",
               "Sem saber conduzir atendimentos.",
@@ -177,23 +216,23 @@ export default function App() {
                 <span className="text-[#4A4A4A]">{item}</span>
               </div>
             ))}
-          </div>
+          </motion.div>
 
           {/* Paragraph */}
-          <p className="text-center text-[#4A4A4A] max-w-3xl mx-auto mb-20 leading-relaxed text-lg">
+          <motion.p variants={fadeInUp} className="text-center text-[#4A4A4A] max-w-3xl mx-auto mb-20 leading-relaxed text-lg">
             O problema não é falta de conhecimento jurídico.<br className="hidden md:block" />
             É a ausência de um método claro, aplicado à prática profissional, que organize o<br className="hidden md:block" />
             atendimento, o fechamento de contrato e a rotina — e permita crescimento em<br className="hidden md:block" />
             constância.
-          </p>
+          </motion.p>
 
           {/* Sub-heading */}
-          <h3 className="text-3xl lg:text-4xl font-bold text-center text-[#A66B4A] mb-20">
+          <motion.h3 variants={fadeInUp} className="text-3xl lg:text-4xl font-bold text-center text-[#A66B4A] mb-20">
             Você sente
-          </h3>
+          </motion.h3>
 
           {/* Three Columns */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+          <motion.div variants={fadeInUp} className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
             {/* Vertical Dividers for Desktop */}
             <div className="hidden md:block absolute top-0 bottom-0 left-[33.33%] w-px bg-gray-200"></div>
             <div className="hidden md:block absolute top-0 bottom-0 right-[33.33%] w-px bg-gray-200"></div>
@@ -258,13 +297,19 @@ export default function App() {
                 ausência de evolução.
               </p>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* Section 3: Infelizmente... */}
-      <section className="w-full bg-gradient-to-r from-[#8E5B3F] to-[#4A2D1A] py-20 px-6 md:px-12 lg:px-24 text-white text-center">
-        <div className="container mx-auto max-w-4xl">
+      <section className="w-full bg-gradient-to-r from-[#8E5B3F] to-[#4A2D1A] py-20 px-6 md:px-12 lg:px-24 text-white text-center overflow-hidden">
+        <motion.div
+          className="container mx-auto max-w-4xl"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.8 }}
+        >
           <div className="h-px bg-white/30 w-16 mx-auto mb-8"></div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 leading-tight">
             Infelizmente isso é mais comum do que parece.
@@ -272,11 +317,11 @@ export default function App() {
           <p className="text-lg md:text-xl font-light italic text-white/90 leading-relaxed max-w-3xl mx-auto">
             "Eu sei todas as leis desse processo, tenho experiência, mas me perco com os clientes e no dia a dia do escritório."
           </p>
-        </div>
+        </motion.div>
       </section>
 
       {/* Section 4: A solução */}
-      <section className="w-full relative py-20 md:py-28 px-6 md:px-12 lg:px-24">
+      <section className="w-full relative py-20 md:py-28 px-6 md:px-12 lg:px-24 overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img
@@ -288,46 +333,55 @@ export default function App() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#FDFCF9]/90 via-[#FDFCF9]/80 to-[#FDFCF9]/90"></div>
         </div>
 
-        <div className="container mx-auto max-w-4xl relative z-10">
-          <div className="h-px bg-[#A66B4A] w-16 mx-auto mb-8 opacity-40"></div>
+        <motion.div
+          className="container mx-auto max-w-4xl relative z-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={staggerContainer}
+        >
+          <motion.div variants={fadeInUp} className="h-px bg-[#A66B4A] w-16 mx-auto mb-8 opacity-40"></motion.div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] text-center text-[#A66B4A] font-bold mb-6 leading-tight">
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl lg:text-[2.5rem] text-center text-[#A66B4A] font-bold mb-6 leading-tight">
             A solução não é mais conteúdo.<br />
             É ter um método claro e eficiente que se sustente a longo prazo.
-          </h2>
+          </motion.h2>
 
-          <p className="text-center text-[#4A4A4A] text-lg mb-16">
+          <motion.p variants={fadeInUp} className="text-center text-[#4A4A4A] text-lg mb-16">
             Tenha acesso a uma mentoria online e individual, voltada à prática jurídica, que vai:
-          </p>
+          </motion.p>
 
-          <div className="flex flex-col gap-4 max-w-3xl mx-auto mb-16">
+          <motion.div variants={fadeInUp} className="flex flex-col gap-4 max-w-3xl mx-auto mb-16">
             {[
               "Organizar decisões e critérios.",
               "Estruturar atendimento, fechamento e rotina.",
-              "Respeitar os limites éticos da advocacia.",
-              "Se adaptar à realidade de cada escritório.",
-              "Orientar condutas com responsabilidade."
+              "Gerar segurança e previsibilidade.",
+              "Construir uma advocacia sustentável."
             ].map((item, index) => (
-              <div
-                key={index}
-                className="bg-gradient-to-r from-[#A66B4A] to-[#4A2D1A] text-white text-center py-5 px-6 rounded-xl text-lg md:text-xl font-medium shadow-md"
-              >
+              <div key={index} className="flex items-center text-[#4A4A4A] text-lg md:text-xl py-3 border-b border-[#A66B4A]/10 last:border-0">
+                <span className="text-[#A66B4A] font-bold mr-4">✓</span>
                 {item}
               </div>
             ))}
-          </div>
+          </motion.div>
 
-          <div className="flex justify-center">
+          <motion.div variants={fadeInUp} className="flex justify-center">
             <button className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] to-[#5C3922] hover:from-[#8E5B3F] hover:to-[#4A2D1A] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base border border-white/20">
               <span>Entre em contato</span>
               <WhatsAppIcon />
             </button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* Section 5: About Mentor */}
-      <section className="w-full bg-[#FDFCF9] pt-20 md:pt-28 px-6 md:px-12 lg:px-24 relative overflow-hidden flex items-end min-h-[600px] md:min-h-[700px]">
+      <motion.section
+        className="w-full bg-[#FDFCF9] pt-20 md:pt-28 px-6 md:px-12 lg:px-24 relative overflow-hidden flex items-end min-h-[600px] md:min-h-[700px]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={staggerContainer}
+      >
         {/* Abstract Background Shapes */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <svg className="absolute right-0 top-0 w-full h-full text-[#D4C5B9] opacity-40" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -335,40 +389,59 @@ export default function App() {
           </svg>
         </div>
 
-        <div className="container mx-auto max-w-6xl relative z-10 flex flex-col md:flex-row items-stretch h-full w-full">
+        <motion.div
+          className="container mx-auto max-w-6xl relative z-10 flex flex-col md:flex-row items-stretch h-full w-full"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={staggerContainer}
+        >
           {/* Text Content */}
-          <div className="w-full md:w-1/2 pr-0 md:pr-12 lg:pr-20 mb-12 md:mb-0 pb-16 md:pb-32 flex flex-col justify-center">
-            <p className="text-[#A66B4A] text-lg mb-2">Eu serei a sua mentora</p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif italic text-[#A66B4A] mb-2">
+          <motion.div
+            className="w-full md:w-1/2 pr-0 md:pr-12 lg:pr-20 mb-12 md:mb-0 pb-16 md:pb-32 flex flex-col justify-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
+          >
+            <motion.p variants={fadeInUp} className="text-[#A66B4A] text-lg mb-2">Eu serei a sua mentora</motion.p>
+            <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl lg:text-6xl font-serif italic text-[#A66B4A] mb-2">
               Havilah Nasser
-            </h2>
-            <p className="text-[#A66B4A] text-lg mb-10 tracking-wider">OAB/AM nº 16.377</p>
+            </motion.h2>
+            <motion.p variants={fadeInUp} className="text-[#A66B4A] text-lg mb-10 tracking-wider">OAB/AM nº 16.377</motion.p>
 
-            <div className="text-[#4A4A4A] text-lg leading-relaxed space-y-6 mb-10">
+            <motion.div variants={fadeInUp} className="text-[#4A4A4A] text-lg leading-relaxed space-y-6 mb-10">
               <p>
                 <span className="font-bold text-[#2A2A2A]">Advogada, formada em Direito pela</span> Universidade<br className="hidden lg:block" />
                 do Estado do Amazonas, <span className="font-bold text-[#2A2A2A]">especialista em Direito<br className="hidden lg:block" />
-                  Público e Previdenciário,</span> atuo à frente de um<br className="hidden lg:block" />
-                escritório jurídico com <span className="font-bold text-[#2A2A2A]">mais de 20 colaboradores,</span><br className="hidden lg:block" />
-                lidando diariamente com a condução de clientes,<br className="hidden lg:block" />
-                equipes e a rotina operacional do escritório.
+                  Público e em LLM em Direito Empresarial pela FGV.</span>
               </p>
               <p>
-                Essa vivência prática é o que fundamenta o<br className="hidden lg:block" />
-                método aplicado na mentoria, sempre com foco<br className="hidden lg:block" />
+                Com atuação na área consultiva, entendi que a essência<br className="hidden lg:block" />
+                de um escritório sólido mora na <span className="font-bold text-[#2A2A2A]">prevenção e na<br className="hidden lg:block" />
+                  estratégia.</span> Hoje, ajudo advogados a estruturarem suas<br className="hidden lg:block" />
+                práticas para crescerem de forma constante, com base<br className="hidden lg:block" />
                 em <span className="font-bold text-[#2A2A2A]">clareza na comunicação, organização dos<br className="hidden lg:block" />
                   processos e postura ética na advocacia.</span>
               </p>
-            </div>
+            </motion.div>
 
-            <button className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] to-[#5C3922] hover:from-[#8E5B3F] hover:to-[#4A2D1A] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
-              <span>Entre em contato</span>
-              <WhatsAppIcon />
-            </button>
-          </div>
+            <motion.div variants={fadeInUp}>
+              <button className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] to-[#5C3922] hover:from-[#8E5B3F] hover:to-[#4A2D1A] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
+                <span>Entre em contato</span>
+                <WhatsAppIcon />
+              </button>
+            </motion.div>
+          </motion.div>
 
           {/* Image Content */}
-          <div className="w-full md:w-1/2 relative flex justify-center items-end mt-10 md:mt-0 min-h-[400px]">
+          <motion.div
+            className="w-full md:w-1/2 relative flex justify-center items-end mt-10 md:mt-0 min-h-[400px]"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          >
             {/* Cutout Image */}
             <div className="relative w-full h-full flex flex-col items-center justify-end md:items-end">
               <img
@@ -378,8 +451,8 @@ export default function App() {
               />
 
               {/* Circular Badge - Positioned on the left of the image */}
-              <div className="absolute bottom-32 left-0 md:-left-16 w-32 h-32 md:w-40 md:h-40 z-30 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 shadow-lg">
-                <div className="relative w-full h-full animate-spin-slow opacity-80">
+              <div className="absolute bottom-16 left-0 md:-left-12 lg:-left-20 w-32 h-32 md:w-40 md:h-40 z-30">
+                <div className="relative w-full h-full animate-spin-slow opacity-60">
                   <svg viewBox="0 0 100 100" className="w-full h-full text-[#A66B4A]">
                     <path
                       id="circlePath2"
@@ -388,25 +461,31 @@ export default function App() {
                     />
                     <text fontSize="9" letterSpacing="2.5" fontWeight="600" fill="currentColor">
                       <textPath href="#circlePath2" startOffset="0%">
-                        HAVILAH NASSER • HAVILAH NASSER •
+                        HAVILAH NASSER • MENTORIA •
                       </textPath>
                     </text>
                   </svg>
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <img src={assinatura} alt="Assinatura n" className="w-12 h-12 md:w-16 md:h-16 object-contain opacity-90 mix-blend-multiply" />
+                  <img src={assinatura} alt="Assinatura n" className="w-12 h-12 md:w-16 md:h-16 object-contain opacity-80 mix-blend-multiply" />
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </motion.div>
+        </motion.div>
+      </motion.section>
 
       {/* Section 6: O Método */}
-      <section className="w-full bg-[#F4F3F0] py-20 md:py-28 px-6 md:px-12 lg:px-24">
-        <div className="container mx-auto max-w-6xl">
+      <section className="w-full bg-[#F4F3F0] py-20 md:py-28 px-6 md:px-12 lg:px-24 overflow-hidden">
+        <motion.div
+          className="container mx-auto max-w-6xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={staggerContainer}
+        >
           {/* Header */}
-          <div className="text-center mb-16">
+          <motion.div variants={fadeInUp} className="text-center mb-16">
             <div className="h-px bg-[#A66B4A] w-16 mx-auto mb-8 opacity-40"></div>
             <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-[#A66B4A] mb-4">
               O método é estruturado em duas mentorias.
@@ -414,10 +493,10 @@ export default function App() {
             <p className="text-lg md:text-xl text-[#4A4A4A]">
               A mentoria trabalha dois eixos complementares:
             </p>
-          </div>
+          </motion.div>
 
           {/* Cards Container */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <motion.div variants={fadeInUp} className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {/* Card 1 */}
             <div className="bg-white rounded-xl p-8 md:p-12 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100">
               <p className="text-xs font-bold tracking-[0.2em] text-[#8E5B3F] uppercase mb-4">
@@ -479,22 +558,28 @@ export default function App() {
                 ))}
               </ul>
             </div>
-          </div>
+          </motion.div>
 
           {/* CTA Button */}
-          <div className="flex justify-center">
+          <motion.div variants={fadeInUp} className="flex justify-center">
             <button className="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] to-[#5C3922] hover:from-[#8E5B3F] hover:to-[#4A2D1A] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
               <span>Entre em contato</span>
               <WhatsAppIcon />
             </button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* Section 7: Testimonials */}
-      <section className="w-full bg-[#F4F3F0] py-20 md:py-28 px-6 md:px-12 lg:px-24">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
+      <section className="w-full bg-[#F4F3F0] py-20 md:py-28 px-6 md:px-12 lg:px-24 overflow-hidden">
+        <motion.div
+          className="container mx-auto max-w-6xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={staggerContainer}
+        >
+          <motion.div variants={fadeInUp} className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-[#A66B4A] mb-4 leading-tight">
               Alguns depoimentos que recebemos<br className="hidden md:block" />
               diariamente de nossos clientes no escritório.
@@ -502,71 +587,84 @@ export default function App() {
             <p className="text-lg md:text-xl text-[#4A4A4A]">
               Experiências reais de clientes que vivenciaram o método na prática.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div variants={fadeInUp} className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Testimonial 1 */}
             <div className="bg-white p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col">
               <div className="w-16 h-16 bg-gray-200 rounded-lg mb-6"></div>
-              <p className="font-medium text-[#2A2A2A] mb-2">Nome cliente</p>
-              <div className="flex text-[#D48B25] mb-6">
-                {"★★★★★".split("").map((star, i) => (
-                  <span key={i} className="text-xl">{star}</span>
+              <div className="flex text-[#A66B4A] mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
                 ))}
               </div>
+              <h4 className="font-bold text-[#2A2A2A] text-lg mb-2">Excelente atendimento</h4>
               <p className="text-[#4A4A4A] leading-relaxed flex-grow">
-                Doutora, só tenho a agradecer, tanto a Deus quanto à senhora, por toda a dedicação que a senhora tem com as pessoas. Que Deus abençoe a senhora e toda a sua família.
+                Fomos super bem tratadas, doutora... muito bem, eu, minha mãe e os vizinhos. Gostamos muito do seu atendimento, muito bom e de verdade com a senhora. A gente sente confiança naquilo que a senhora transmitiu para a gente. E assim, de já eu agradeço de coração pela atenção que e senhora teve com a gente. Eu sou prova viva de que a senhora nos explicou super bem lá o pessoal da casa onde o papai faleceu. Confiança maravilhosa!
               </p>
             </div>
 
             {/* Testimonial 2 */}
             <div className="bg-white p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col">
               <div className="w-16 h-16 bg-gray-200 rounded-lg mb-6"></div>
-              <p className="font-medium text-[#2A2A2A] mb-2">Nome cliente</p>
-              <div className="flex text-[#D48B25] mb-6">
-                {"★★★★★".split("").map((star, i) => (
-                  <span key={i} className="text-xl">{star}</span>
+              <div className="flex text-[#A66B4A] mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
                 ))}
               </div>
+              <h4 className="font-bold text-[#2A2A2A] text-lg mb-2">Clareza e confiança</h4>
               <p className="text-[#4A4A4A] leading-relaxed flex-grow">
-                Os melhores advogados que já conheci. Gratidão por fazerem parte da minha vida. Minha Dra. linda, amo muito vocês ❤️
+                O dia que a senhora não quiser mais advogar a senhora tá feita. Não tem explicação de como é clara do começo ao fim. Tem nem dúvida eu só confio hahaha. Pode mandar a chave do pix pra amanhã...
               </p>
             </div>
 
             {/* Testimonial 3 */}
             <div className="bg-white p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col">
               <div className="w-16 h-16 bg-gray-200 rounded-lg mb-6"></div>
-              <p className="font-medium text-[#2A2A2A] mb-2">Nome cliente</p>
-              <div className="flex text-[#D48B25] mb-6">
-                {"★★★★★".split("").map((star, i) => (
-                  <span key={i} className="text-xl">{star}</span>
+              <div className="flex text-[#A66B4A] mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
                 ))}
               </div>
+              <h4 className="font-bold text-[#2A2A2A] text-lg mb-2">Gratidão pela dedicação</h4>
               <p className="text-[#4A4A4A] leading-relaxed flex-grow">
                 A senhora merece todo o nosso carinho, doutora. Agradecemos a Deus por ter você ao nosso lado.
               </p>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* Section 8: Final CTA */}
-      <section className="w-full bg-[#FDFCF9] py-20 md:py-32 px-6 md:px-12 lg:px-24">
-        <div className="container mx-auto max-w-5xl text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-[2.8rem] font-bold text-[#A66B4A] mb-8 leading-tight">
-            Pronto para parar de improvisar e começar a conduzir<br className="hidden lg:block" />
-            sua carreira com clareza e eficiência?
-          </h2>
+      <section className="w-full bg-[#FDFCF9] py-20 md:py-32 px-6 md:px-12 lg:px-24 overflow-hidden">
+        <motion.div
+          className="container mx-auto max-w-5xl text-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          variants={staggerContainer}
+        >
+          <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl lg:text-[2.8rem] font-bold text-[#A66B4A] mb-8 leading-tight">
+            Pronto para parar de improvisar e começar a conduzir sua carreira com clareza e eficiência?
+          </motion.h2>
 
-          <p className="text-lg md:text-xl text-[#4A4A4A] mb-16 leading-relaxed max-w-4xl mx-auto">
+          <motion.p variants={fadeInUp} className="text-lg md:text-xl text-[#4A4A4A] mb-16 leading-relaxed max-w-4xl mx-auto">
             Se você já se cansou de bater cabeça tentando encontrar um caminho para resolver esses problemas, entre em contato comigo para mais detalhes da mentoria e dar um passo seguro na sua trajetória jurídica.
-          </p>
+          </motion.p>
 
-          <button className="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] to-[#5C3922] hover:from-[#8E5B3F] hover:to-[#4A2D1A] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
-            <span>Entre em contato</span>
-            <WhatsAppIcon />
-          </button>
-        </div>
+          <motion.div variants={fadeInUp}>
+            <button className="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] to-[#5C3922] hover:from-[#8E5B3F] hover:to-[#4A2D1A] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
+              <span>Entre em contato</span>
+              <WhatsAppIcon />
+            </button>
+          </motion.div>
+        </motion.div>
       </section>
     </div>
   );
