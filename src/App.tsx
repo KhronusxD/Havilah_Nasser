@@ -1,4 +1,6 @@
 import React from 'react';
+import fotoSessao1 from './assets/foto-sessao-1.png';
+import fotoSessao2 from './assets/foto-sessao-2.png';
 
 const WhatsAppIcon = () => (
   <svg
@@ -92,10 +94,9 @@ export default function App() {
             {/* Placeholder for the cutout image */}
             <div className="relative w-full max-w-[500px] h-full flex items-end justify-center md:justify-end">
               <img
-                src="https://raw.githubusercontent.com/stackblitz/stackblitz-images/main/havilah-1.png"
+                src={fotoSessao1}
                 alt="Havilah Nasser"
                 className="object-contain object-bottom w-[90%] md:w-full h-full max-h-[600px] md:max-h-[800px] drop-shadow-2xl"
-                referrerPolicy="no-referrer"
               />
 
               {/* Circular Badge */}
@@ -370,10 +371,9 @@ export default function App() {
           <div className="w-full md:w-1/2 relative flex justify-center items-end h-[500px] md:h-[700px]">
             {/* Cutout Image */}
             <img
-              src="https://raw.githubusercontent.com/stackblitz/stackblitz-images/main/havilah-2.png"
+              src={fotoSessao2}
               alt="Havilah Nasser"
               className="object-contain object-bottom w-[90%] md:w-full h-full max-h-[700px] drop-shadow-2xl relative z-20"
-              referrerPolicy="no-referrer"
             />
 
             {/* Circular Badge - Positioned on the left of the image */}
