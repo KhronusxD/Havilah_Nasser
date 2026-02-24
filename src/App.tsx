@@ -80,7 +80,7 @@ export default function App() {
               <span className="font-bold text-[#2A2A2A]">O problema</span> não é o seu conhecimento <br className="hidden md:block" />
               jurídico — <span className="font-bold text-[#2A2A2A]">
                 é a ausência de método <br className="hidden md:block" />
-                claro e sustentável..
+                claro e sustentável.
               </span>
             </p>
 
@@ -97,7 +97,7 @@ export default function App() {
               <img
                 src={fotoSessao1}
                 alt="Havilah Nasser"
-                className="object-contain object-bottom scale-[1.7] md:scale-[2.0] origin-bottom drop-shadow-2xl translate-y-2 lg:translate-x-8"
+                className="object-contain object-bottom scale-[1.95] md:scale-[2.0] origin-bottom drop-shadow-2xl translate-y-2 lg:translate-x-8"
               />
 
               {/* Circular Badge */}
@@ -183,8 +183,8 @@ export default function App() {
           <p className="text-center text-[#4A4A4A] max-w-3xl mx-auto mb-20 leading-relaxed text-lg">
             O problema não é falta de conhecimento jurídico.<br className="hidden md:block" />
             É a ausência de um método claro, aplicado à prática profissional, que organize o<br className="hidden md:block" />
-            atendimento, o fechamento de contratos e a rotina — e permita crescimento com<br className="hidden md:block" />
-            consistência.
+            atendimento, o fechamento de contrato e a rotina — e permita crescimento em<br className="hidden md:block" />
+            constância.
           </p>
 
           {/* Sub-heading */}
@@ -228,7 +228,7 @@ export default function App() {
                   <path d="M15 17l1.5 1.5 2.5-2.5" />
                 </svg>
               </div>
-              <h4 className="text-[#A66B4A] font-medium text-lg mb-4">No fechamento de contratos</h4>
+              <h4 className="text-[#A66B4A] font-medium text-lg mb-4">No fechamento de contrato</h4>
               <p className="text-[#4A4A4A] leading-relaxed">
                 Dificuldade na apresentação<br />
                 dos honorários.<br />
@@ -267,8 +267,7 @@ export default function App() {
         <div className="container mx-auto max-w-4xl">
           <div className="h-px bg-white/30 w-16 mx-auto mb-8"></div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 leading-tight">
-            Infelizmente isso é mais comum do que parece.<br className="hidden md:block" />
-            E eu já me senti assim.
+            Infelizmente isso é mais comum do que parece.
           </h2>
           <p className="text-lg md:text-xl font-light italic text-white/90 leading-relaxed max-w-3xl mx-auto">
             "Eu sei todas as leis desse processo, tenho experiência, mas me perco com os clientes e no dia a dia do escritório."
@@ -375,7 +374,7 @@ export default function App() {
               <img
                 src={fotoSessao2}
                 alt="Havilah Nasser"
-                className="object-contain object-bottom scale-[1.3] md:scale-[1.5] origin-bottom drop-shadow-2xl relative z-20 translate-y-2 lg:translate-x-12"
+                className="object-contain object-bottom scale-[1.55] md:scale-[1.5] origin-bottom drop-shadow-2xl relative z-20 translate-y-2 lg:translate-x-12"
               />
 
               {/* Circular Badge - Positioned on the left of the image */}
@@ -439,7 +438,7 @@ export default function App() {
                   "Clareza na explicação de estratégia, riscos e próximos passos",
                   "Segurança ao tratar honorários, escopo e contratos",
                   "Critérios objetivos para apresentação de propostas",
-                  "Fechamento ético, organizado e consciente",
+                  "Fechamento de contrato ético, organizado e consciente",
                   "Posicionamento do serviço sem confronto ou improviso"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
@@ -466,7 +465,7 @@ export default function App() {
 
               <ul className="space-y-6">
                 {[
-                  "Fluxo de trabalho após o fechamento do contrato",
+                  "Fluxo de trabalho após o fechamento de contrato",
                   "Estruturação operacional do escritório",
                   "Definição clara de papéis e responsabilidades",
                   "Redução de retrabalho e falhas operacionais",
