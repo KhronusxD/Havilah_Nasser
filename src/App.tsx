@@ -97,7 +97,7 @@ export default function App() {
               <img
                 src={fotoSessao1}
                 alt="Havilah Nasser"
-                className="object-contain object-bottom scale-[1.5] md:scale-[1.75] origin-bottom drop-shadow-2xl translate-y-2 lg:translate-x-8"
+                className="object-contain object-bottom scale-[1.7] md:scale-[2.0] origin-bottom drop-shadow-2xl translate-y-2 lg:translate-x-8"
               />
 
               {/* Circular Badge */}
