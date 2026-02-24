@@ -64,7 +64,7 @@ export default function App() {
         <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10 flex flex-col md:flex-row items-center h-full py-12 md:py-0">
           {/* Text Content */}
           <div className="w-full md:w-[55%] pt-10 pb-12 md:py-20 pr-0 md:pr-12 lg:pr-20 z-20">
-            <h1 className="text-[2rem] md:text-[2.5rem] lg:text-[3.2rem] leading-[1.15] font-normal mb-8 text-[#2A2A2A] tracking-tight">
+            <h1 className="text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] leading-[1.2] font-normal mb-8 text-[#2A2A2A] tracking-tight">
               Você já comprou <br className="hidden lg:block" />
               <span className="font-bold">inúmeros cursos</span> que <br className="hidden lg:block" />
               prometem faturamento? <br className="hidden lg:block" />
@@ -96,7 +96,7 @@ export default function App() {
               <img
                 src={fotoSessao1}
                 alt="Havilah Nasser"
-                className="object-contain object-bottom w-[90%] md:w-full h-full max-h-[600px] md:max-h-[800px] drop-shadow-2xl"
+                className="object-contain object-bottom w-[80%] md:w-[90%] lg:w-[85%] h-full max-h-[450px] md:max-h-[650px] drop-shadow-2xl"
               />
 
               {/* Circular Badge */}
@@ -290,12 +290,12 @@ export default function App() {
 
         <div className="container mx-auto max-w-4xl relative z-10">
           <div className="h-px bg-[#A66B4A] w-16 mx-auto mb-8 opacity-40"></div>
-          
+
           <h2 className="text-3xl md:text-4xl lg:text-[2.5rem] text-center text-[#A66B4A] font-bold mb-6 leading-tight">
             A solução não é mais conteúdo.<br />
             É ter um método claro e eficiente que se sustente a longo prazo.
           </h2>
-          
+
           <p className="text-center text-[#4A4A4A] text-lg mb-16">
             Tenha acesso a uma mentoria online e individual, voltada à prática jurídica, que vai:
           </p>
@@ -308,8 +308,8 @@ export default function App() {
               "Se adaptar à realidade de cada escritório.",
               "Orientar condutas com responsabilidade."
             ].map((item, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="bg-gradient-to-r from-[#A66B4A] to-[#4A2D1A] text-white text-center py-5 px-6 rounded-xl text-lg md:text-xl font-medium shadow-md"
               >
                 {item}
@@ -348,7 +348,7 @@ export default function App() {
               <p>
                 <span className="font-bold text-[#2A2A2A]">Advogada, formada em Direito pela</span> Universidade<br className="hidden lg:block" />
                 do Estado do Amazonas, <span className="font-bold text-[#2A2A2A]">especialista em Direito<br className="hidden lg:block" />
-                Público e Previdenciário,</span> atuo à frente de um<br className="hidden lg:block" />
+                  Público e Previdenciário,</span> atuo à frente de um<br className="hidden lg:block" />
                 escritório jurídico com <span className="font-bold text-[#2A2A2A]">mais de 20 colaboradores,</span><br className="hidden lg:block" />
                 lidando diariamente com a condução de clientes,<br className="hidden lg:block" />
                 equipes e a rotina operacional do escritório.
@@ -357,7 +357,7 @@ export default function App() {
                 Essa vivência prática é o que fundamenta o<br className="hidden lg:block" />
                 método aplicado na mentoria, sempre com foco<br className="hidden lg:block" />
                 em <span className="font-bold text-[#2A2A2A]">clareza na comunicação, organização dos<br className="hidden lg:block" />
-                processos e postura ética na advocacia.</span>
+                  processos e postura ética na advocacia.</span>
               </p>
             </div>
 
@@ -373,7 +373,7 @@ export default function App() {
             <img
               src={fotoSessao2}
               alt="Havilah Nasser"
-              className="object-contain object-bottom w-[90%] md:w-full h-full max-h-[700px] drop-shadow-2xl relative z-20"
+              className="object-contain object-bottom w-[80%] md:w-[90%] lg:w-[85%] h-full max-h-[450px] md:max-h-[600px] drop-shadow-2xl relative z-20"
             />
 
             {/* Circular Badge - Positioned on the left of the image */}
@@ -427,9 +427,9 @@ export default function App() {
               <p className="text-[#4A4A4A] mb-8 leading-relaxed">
                 Um método estruturado para conduzir atendimentos com segurança e fechar contratos de forma ética e consciente.
               </p>
-              
+
               <div className="h-px w-full bg-gray-100 mb-8"></div>
-              
+
               <ul className="space-y-6">
                 {[
                   "Organização do atendimento do início ao fim",
@@ -458,9 +458,9 @@ export default function App() {
               <p className="text-[#4A4A4A] mb-8 leading-relaxed">
                 Construção de uma prática jurídica estável, previsível e funcional.
               </p>
-              
+
               <div className="h-px w-full bg-gray-100 mb-8"></div>
-              
+
               <ul className="space-y-6">
                 {[
                   "Fluxo de trabalho após o fechamento do contrato",
@@ -555,11 +555,11 @@ export default function App() {
             Pronto para parar de improvisar e começar a conduzir<br className="hidden lg:block" />
             sua carreira com clareza e eficiência?
           </h2>
-          
+
           <p className="text-lg md:text-xl text-[#4A4A4A] mb-16 leading-relaxed max-w-4xl mx-auto">
             Se você já se cansou de bater cabeça tentando encontrar um caminho para resolver esses problemas, entre em contato comigo para mais detalhes da mentoria e dar um passo seguro na sua trajetória jurídica.
           </p>
-          
+
           <button className="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] to-[#5C3922] hover:from-[#8E5B3F] hover:to-[#4A2D1A] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
             <span>Entre em contato</span>
             <WhatsAppIcon />
