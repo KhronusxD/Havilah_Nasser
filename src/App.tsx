@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import fotoSessao1 from './assets/foto-sessao-1.png';
-import fotoSessao2 from './assets/foto-sessao-2.png';
+import fotoSessao1 from './assets/foto-sessao-1.webp';
+import fotoSessao2 from './assets/foto-sessao-2.webp';
 import assinatura from './assets/assinatura.png';
 
 const fadeInUp = {
@@ -50,7 +50,7 @@ export default function App() {
           <div className="w-full md:w-[35%] h-full relative overflow-hidden">
             {/* Blurred office background */}
             <img
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600"
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=50&w=400"
               alt="Office Background"
               className="absolute inset-0 w-full h-full object-cover opacity-20 blur-sm mix-blend-multiply"
               referrerPolicy="no-referrer"
@@ -324,7 +324,7 @@ export default function App() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=1600"
+            src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=50&w=800"
             alt="Law Office Background"
             className="w-full h-full object-cover opacity-10"
             referrerPolicy="no-referrer"
