@@ -21,19 +21,17 @@ const staggerContainer = {
 
 const WhatsAppIcon = () => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="22"
-    height="22"
     viewBox="0 0 24 24"
     fill="currentColor"
     className="ml-2"
+    aria-hidden="true"
   >
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
   </svg>
 );
 
 const LogoN = () => (
-  <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M20 80 C 20 50, 40 20, 60 20 C 80 20, 80 50, 80 80" stroke="currentColor" strokeWidth="4" strokeLinecap="round" fill="none" />
     <path d="M20 80 L 20 20" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
   </svg>
@@ -56,12 +54,14 @@ export default function App() {
               alt="Office Background"
               className="absolute inset-0 w-full h-full object-cover opacity-20 blur-sm mix-blend-multiply"
               referrerPolicy="no-referrer"
+              fetchpriority="high"
             />
             {/* Abstract curved line */}
             <svg
               className="absolute inset-0 w-full h-full text-[#D4C5B9] opacity-60"
               viewBox="0 0 100 100"
               preserveAspectRatio="none"
+              aria-hidden="true"
             >
               <path
                 d="M-20,80 Q30,20 70,60 T120,20"
@@ -129,12 +129,13 @@ export default function App() {
                 src={fotoSessao1}
                 alt="Havilah Nasser"
                 className="object-contain object-bottom scale-[1.35] md:scale-[2.0] origin-bottom drop-shadow-2xl translate-y-2 lg:translate-x-8"
+                fetchpriority="high"
               />
 
               {/* Circular Badge */}
               <div className="absolute bottom-20 left-0 md:-left-24 w-32 h-32 md:w-40 md:h-40 z-30">
                 <div className="relative w-full h-full animate-spin-slow opacity-60">
-                  <svg viewBox="0 0 100 100" className="w-full h-full text-[#5C3922]">
+                  <svg viewBox="0 0 100 100" className="w-full h-full text-[#5C3922]" aria-hidden="true">
                     <path
                       id="circlePath"
                       d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
@@ -148,7 +149,7 @@ export default function App() {
                   </svg>
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <img src={assinatura} alt="Assinatura n" className="w-12 h-12 md:w-16 md:h-16 object-contain opacity-80 mix-blend-multiply" />
+                  <img src={assinatura} alt="" className="w-12 h-12 md:w-16 md:h-16 object-contain opacity-80 mix-blend-multiply" aria-hidden="true" />
                 </div>
               </div>
             </div>
@@ -161,7 +162,7 @@ export default function App() {
         <div className="flex whitespace-nowrap animate-marquee">
           {[...Array(10)].map((_, i) => (
             <div key={i} className="flex items-center mx-8 text-white/90">
-              <img src={assinatura} alt="Assinatura" className="w-8 h-8 object-contain mr-6 opacity-80 brightness-0 invert" />
+              <img src={assinatura} alt="" className="w-8 h-8 object-contain mr-6 opacity-80 brightness-0 invert" aria-hidden="true" />
               <span className="text-lg tracking-[0.25em] font-medium">HAVILAH NASSER</span>
             </div>
           ))}
@@ -170,7 +171,7 @@ export default function App() {
         <div className="flex whitespace-nowrap animate-marquee" aria-hidden="true">
           {[...Array(10)].map((_, i) => (
             <div key={`dup-${i}`} className="flex items-center mx-8 text-white/90">
-              <img src={assinatura} alt="Assinatura" className="w-8 h-8 object-contain mr-6 opacity-80 brightness-0 invert" />
+              <img src={assinatura} alt="" className="w-8 h-8 object-contain mr-6 opacity-80 brightness-0 invert" aria-hidden="true" />
               <span className="text-lg tracking-[0.25em] font-medium">HAVILAH NASSER</span>
             </div>
           ))}
@@ -238,7 +239,7 @@ export default function App() {
             {/* Column 1 */}
             <div className="flex flex-col items-center text-center px-4">
               <div className="mb-8 h-16 flex items-center justify-center">
-                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#2A2A2A" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#2A2A2A" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <circle cx="9" cy="9" r="4" />
                   <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
                   <path d="M21 10c0 2.2-2.2 4-5 4-.5 0-1-.1-1.5-.2l-2.5 1 .5-2A4.5 4.5 0 0 1 11 10c0-2.2 2.2-4 5-4s5 1.8 5 4z" />
@@ -255,7 +256,7 @@ export default function App() {
             {/* Column 2 */}
             <div className="flex flex-col items-center text-center px-4">
               <div className="mb-8 h-16 flex items-center justify-center">
-                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#2A2A2A" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#2A2A2A" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                   <polyline points="14 2 14 8 20 8" />
                   <line x1="8" y1="13" x2="16" y2="13" />
@@ -276,7 +277,7 @@ export default function App() {
             {/* Column 3 */}
             <div className="flex flex-col items-center text-center px-4">
               <div className="mb-8 h-16 flex items-center justify-center">
-                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#2A2A2A" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#2A2A2A" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
                   <line x1="16" y1="2" x2="16" y2="6" />
                   <line x1="8" y1="2" x2="8" y2="6" />
@@ -327,6 +328,7 @@ export default function App() {
             alt="Law Office Background"
             className="w-full h-full object-cover opacity-10"
             referrerPolicy="no-referrer"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#FDFCF9]/90 via-[#FDFCF9]/80 to-[#FDFCF9]/90"></div>
         </div>
@@ -439,12 +441,13 @@ export default function App() {
                 src={fotoSessao2}
                 alt="Havilah Nasser"
                 className="object-contain object-bottom scale-[1.55] md:scale-[1.5] origin-bottom drop-shadow-2xl relative z-20 translate-y-2 lg:translate-x-12"
+                loading="lazy"
               />
 
               {/* Circular Badge - Positioned on the left of the image */}
               <div className="absolute bottom-16 left-0 md:-left-12 lg:-left-20 w-32 h-32 md:w-40 md:h-40 z-30">
                 <div className="relative w-full h-full animate-spin-slow opacity-60">
-                  <svg viewBox="0 0 100 100" className="w-full h-full text-[#A66B4A]">
+                  <svg viewBox="0 0 100 100" className="w-full h-full text-[#A66B4A]" aria-hidden="true">
                     <path
                       id="circlePath2"
                       d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
@@ -458,7 +461,7 @@ export default function App() {
                   </svg>
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <img src={assinatura} alt="Assinatura n" className="w-12 h-12 md:w-16 md:h-16 object-contain opacity-80 mix-blend-multiply" />
+                  <img src={assinatura} alt="" className="w-12 h-12 md:w-16 md:h-16 object-contain opacity-80 mix-blend-multiply" aria-hidden="true" />
                 </div>
               </div>
             </div>
@@ -583,7 +586,7 @@ export default function App() {
             {/* Testimonial 1 */}
             <div className="bg-white p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col">
               <div className="w-16 h-16 bg-gray-200 rounded-lg mb-6"></div>
-              <div className="flex text-[#A66B4A] mb-4">
+              <div className="flex text-[#A66B4A] mb-4" aria-hidden="true">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -599,7 +602,7 @@ export default function App() {
             {/* Testimonial 2 */}
             <div className="bg-white p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col">
               <div className="w-16 h-16 bg-gray-200 rounded-lg mb-6"></div>
-              <div className="flex text-[#A66B4A] mb-4">
+              <div className="flex text-[#A66B4A] mb-4" aria-hidden="true">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -615,7 +618,7 @@ export default function App() {
             {/* Testimonial 3 */}
             <div className="bg-white p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col">
               <div className="w-16 h-16 bg-gray-200 rounded-lg mb-6"></div>
-              <div className="flex text-[#A66B4A] mb-4">
+              <div className="flex text-[#A66B4A] mb-4" aria-hidden="true">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -671,6 +674,7 @@ export default function App() {
           height="32"
           viewBox="0 0 24 24"
           fill="currentColor"
+          aria-hidden="true"
         >
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
         </svg>
