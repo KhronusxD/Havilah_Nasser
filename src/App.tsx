@@ -43,6 +43,8 @@ const LogoN = () => (
   </svg>
 );
 
+const whatsappLink = "https://wa.me/5592994785643?text=Ol%C3%A1%2C%20Havilah%21%20Tenho%20interesse%20na%20mentoria...%21";
+
 export default function App() {
   return (
     <div className="min-h-screen bg-[#FDFCF9] font-montserrat text-[#2A2A2A] overflow-hidden flex flex-col">
@@ -110,10 +112,10 @@ export default function App() {
             </motion.p>
 
             <motion.div variants={fadeInUp} className="w-full sm:w-max">
-              <button className="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] via-[#5C3922] to-[#A66B4A] animate-gradient transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] via-[#5C3922] to-[#A66B4A] animate-gradient transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
                 <span>Entre em contato</span>
                 <WhatsAppIcon />
-              </button>
+              </a>
             </motion.div>
           </motion.div>
 
@@ -366,10 +368,10 @@ export default function App() {
           </motion.div>
 
           <motion.div variants={fadeInUp} className="flex justify-center">
-            <button className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] via-[#5C3922] to-[#A66B4A] animate-gradient transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base border border-white/20">
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] via-[#5C3922] to-[#A66B4A] animate-gradient transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base border border-white/20">
               <span>Entre em contato</span>
               <WhatsAppIcon />
-            </button>
+            </a>
           </motion.div>
         </motion.div>
       </section>
@@ -420,10 +422,10 @@ export default function App() {
             </motion.div>
 
             <motion.div variants={fadeInUp}>
-              <button className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] via-[#5C3922] to-[#A66B4A] animate-gradient transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] via-[#5C3922] to-[#A66B4A] animate-gradient transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
                 <span>Entre em contato</span>
                 <WhatsAppIcon />
-              </button>
+              </a>
             </motion.div>
           </motion.div>
 
@@ -555,10 +557,10 @@ export default function App() {
 
           {/* CTA Button */}
           <motion.div variants={fadeInUp} className="flex justify-center">
-            <button className="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] via-[#5C3922] to-[#A66B4A] animate-gradient transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] via-[#5C3922] to-[#A66B4A] animate-gradient transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
               <span>Entre em contato</span>
               <WhatsAppIcon />
-            </button>
+            </a>
           </motion.div>
         </motion.div>
       </section>
@@ -651,13 +653,36 @@ export default function App() {
           </motion.p>
 
           <motion.div variants={fadeInUp}>
-            <button className="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] via-[#5C3922] to-[#A66B4A] animate-gradient transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-white uppercase tracking-wider rounded-full overflow-hidden bg-gradient-to-r from-[#A66B4A] via-[#5C3922] to-[#A66B4A] animate-gradient transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm md:text-base">
               <span>Entre em contato</span>
               <WhatsAppIcon />
-            </button>
+            </a>
           </motion.div>
         </motion.div>
       </section>
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href={whatsappLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:shadow-2xl hover:scale-110 transition-transform flex items-center justify-center"
+        aria-label="Fale conosco no WhatsApp"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+      </a>
     </div>
   );
 }
