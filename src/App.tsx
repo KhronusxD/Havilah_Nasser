@@ -199,8 +199,8 @@ export default function App() {
 
           {/* Main Heading */}
           <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl lg:text-[2.5rem] text-center text-[#A66B4A] font-medium mb-16 leading-[1.3]">
-            Em um dia você está na faculdade, <br />
-            no outro, é jogado no mercado.
+            Em um dia você está na faculdade. <br />
+            No outro é jogado no mercado.
           </motion.h2>
 
           {/* Grid of 6 items */}
