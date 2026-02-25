@@ -197,8 +197,8 @@ export default function App() {
 
           {/* Main Heading */}
           <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl lg:text-[2.5rem] text-center text-[#A66B4A] font-medium mb-16 leading-[1.3]">
-            Em um dia você está na faculdade <br className="hidden md:block" />
-            No outro é jogado no mercado
+            Em um dia você está na faculdade, <br />
+            no outro, é jogado no mercado.
           </motion.h2>
 
           {/* Grid of 6 items */}
@@ -220,9 +220,9 @@ export default function App() {
 
           {/* Paragraph */}
           <motion.p variants={fadeInUp} className="text-center text-[#4A4A4A] max-w-3xl mx-auto mb-20 leading-relaxed text-lg">
-            O problema não é falta de conhecimento jurídico.<br className="hidden md:block" />
-            É a ausência de um método claro, aplicado à prática profissional, que organize o<br className="hidden md:block" />
-            atendimento, o fechamento de contrato e a rotina — e permita crescimento em<br className="hidden md:block" />
+            O problema não é falta de conhecimento jurídico. <br className="hidden md:block" />
+            É a ausência de um método claro, aplicado à prática profissional, que organize o <br className="hidden md:block" />
+            atendimento, o fechamento de contrato e a rotina — e permita crescimento em <br className="hidden md:block" />
             constância.
           </motion.p>
 
@@ -248,8 +248,8 @@ export default function App() {
               </div>
               <h4 className="text-[#A66B4A] font-medium text-lg mb-4">No atendimento</h4>
               <p className="text-[#4A4A4A] leading-relaxed">
-                Insegurança na condução.<br />
-                Atendimentos inconsistentes e<br />
+                Insegurança na condução. <br />
+                Atendimentos inconsistentes e <br />
                 sem um padrão claro.
               </p>
             </div>
@@ -269,8 +269,8 @@ export default function App() {
               </div>
               <h4 className="text-[#A66B4A] font-medium text-lg mb-4">No fechamento de contrato</h4>
               <p className="text-[#4A4A4A] leading-relaxed">
-                Dificuldade na apresentação<br />
-                dos honorários.<br />
+                Dificuldade na apresentação <br />
+                dos honorários. <br />
                 Perda de firmeza na proposta.
               </p>
             </div>
@@ -292,8 +292,8 @@ export default function App() {
               </div>
               <h4 className="text-[#A66B4A] font-medium text-lg mb-4">Na rotina</h4>
               <p className="text-[#4A4A4A] leading-relaxed">
-                Atuação reativa.<br />
-                Retrabalho, prazos perdidos e<br />
+                Atuação reativa. <br />
+                Retrabalho, prazos perdidos e <br />
                 ausência de evolução.
               </p>
             </div>
@@ -343,7 +343,7 @@ export default function App() {
           <motion.div variants={fadeInUp} className="h-px bg-[#A66B4A] w-16 mx-auto mb-8 opacity-40"></motion.div>
 
           <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl lg:text-[2.5rem] text-center text-[#A66B4A] font-bold mb-6 leading-tight">
-            A solução não é mais conteúdo.<br />
+            A solução não é mais conteúdo. <br />
             É ter um método claro e eficiente que se sustente a longo prazo.
           </motion.h2>
 
@@ -405,16 +405,16 @@ export default function App() {
 
             <motion.div variants={fadeInUp} className="text-[#4A4A4A] text-lg leading-relaxed space-y-6 mb-10">
               <p>
-                <span className="font-bold text-[#2A2A2A]">Advogada, formada em Direito pela</span> Universidade<br className="hidden lg:block" />
-                do Estado do Amazonas, <span className="font-bold text-[#2A2A2A]">especialista em Direito<br className="hidden lg:block" />
-                  Público e em LLM em Direito Empresarial pela FGV.</span>
+                <span className="font-bold text-[#2A2A2A]">Advogada, formada em Direito pela</span> Universidade <br className="hidden lg:block" />
+                do Estado do Amazonas, <span className="font-bold text-[#2A2A2A]">especialista em Direito <br className="hidden lg:block" />
+                  Público e LLM em Direito Empresarial pela FGV.</span>
               </p>
               <p>
-                Com atuação na área consultiva, entendi que a essência<br className="hidden lg:block" />
-                de um escritório sólido mora na <span className="font-bold text-[#2A2A2A]">prevenção e na<br className="hidden lg:block" />
-                  estratégia.</span> Hoje, ajudo advogados a estruturarem suas<br className="hidden lg:block" />
-                práticas para crescerem de forma constante, com base<br className="hidden lg:block" />
-                em <span className="font-bold text-[#2A2A2A]">clareza na comunicação, organização dos<br className="hidden lg:block" />
+                Com atuação na área consultiva, entendi que a essência <br className="hidden lg:block" />
+                de um escritório sólido mora na <span className="font-bold text-[#2A2A2A]">prevenção e na <br className="hidden lg:block" />
+                  estratégia.</span> Hoje, ajudo advogados a estruturarem suas <br className="hidden lg:block" />
+                práticas para crescerem de forma constante, com base <br className="hidden lg:block" />
+                em <span className="font-bold text-[#2A2A2A]">clareza na comunicação, organização dos <br className="hidden lg:block" />
                   processos e postura ética na advocacia.</span>
               </p>
             </motion.div>
@@ -506,12 +506,12 @@ export default function App() {
 
               <ul className="space-y-6">
                 {[
-                  "Organização do atendimento do início ao fim",
-                  "Clareza na explicação de estratégia, riscos e próximos passos",
-                  "Segurança ao tratar honorários, escopo e contratos",
-                  "Critérios objetivos para apresentação de propostas",
-                  "Fechamento de contrato ético, organizado e consciente",
-                  "Posicionamento do serviço sem confronto ou improviso"
+                  "Organização do atendimento, do início ao fim.",
+                  "Clareza na explicação da estratégia, dos riscos e dos próximos passos.",
+                  "Segurança ao tratar sobre honorários, escopo e contratos.",
+                  "Critérios objetivos para a apresentação de propostas.",
+                  "Fechamento de contrato ético, organizado e consciente.",
+                  "Posicionamento do serviço sem confronto ou improviso."
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
                     <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#A66B4A] mt-2.5 mr-4 flex-shrink-0 opacity-60"></span>
@@ -537,12 +537,12 @@ export default function App() {
 
               <ul className="space-y-6">
                 {[
-                  "Fluxo de trabalho após o fechamento de contrato",
-                  "Estruturação operacional do escritório",
-                  "Definição clara de papéis e responsabilidades",
-                  "Redução de retrabalho e falhas operacionais",
-                  "Integração entre atendimento, execução e pós-contrato",
-                  "Construção de uma rotina previsível e sustentável"
+                  "Fluxo de trabalho após o fechamento do contrato.",
+                  "Estruturação operacional do escritório.",
+                  "Definição clara de papéis e responsabilidades.",
+                  "Redução de retrabalho e de falhas operacionais.",
+                  "Integração entre atendimento, execução e pós-contrato.",
+                  "Construção de uma rotina previsível e sustentável."
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
                     <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#A66B4A] mt-2.5 mr-4 flex-shrink-0 opacity-60"></span>
@@ -594,7 +594,7 @@ export default function App() {
               </div>
               <h4 className="font-bold text-[#2A2A2A] text-lg mb-2">Excelente atendimento</h4>
               <p className="text-[#4A4A4A] leading-relaxed flex-grow">
-                Fomos super bem tratadas, doutora... muito bem, eu, minha mãe e os vizinhos. Gostamos muito do seu atendimento, muito bom e de verdade com a senhora. A gente sente confiança naquilo que a senhora transmitiu para a gente. E assim, de já eu agradeço de coração pela atenção que e senhora teve com a gente. Eu sou prova viva de que a senhora nos explicou super bem lá o pessoal da casa onde o papai faleceu. Confiança maravilhosa!
+                "Fomos super bem tratadas, doutora... muito bem, eu, minha mãe e os vizinhos. Gostamos muito do seu atendimento, muito bom e de verdade com a senhora. A gente sente confiança naquilo que a senhora transmitiu para a gente. E, assim, desde já eu agradeço de coração pela atenção que a senhora teve com a gente. Eu sou prova viva de que a senhora nos explicou super bem lá para o pessoal da casa onde o papai faleceu. Confiança maravilhosa!"
               </p>
             </div>
 
@@ -610,7 +610,7 @@ export default function App() {
               </div>
               <h4 className="font-bold text-[#2A2A2A] text-lg mb-2">Clareza e confiança</h4>
               <p className="text-[#4A4A4A] leading-relaxed flex-grow">
-                O dia que a senhora não quiser mais advogar a senhora tá feita. Não tem explicação de como é clara do começo ao fim. Tem nem dúvida eu só confio hahaha. Pode mandar a chave do pix pra amanhã...
+                "O dia em que a senhora não quiser mais advogar, a senhora tá feita. Não tem explicação de como a senhora é clara do começo ao fim. Não tem nem dúvida, eu só confio hahaha. Pode mandar a chave do PIX para amanhã..."
               </p>
             </div>
 
@@ -626,7 +626,7 @@ export default function App() {
               </div>
               <h4 className="font-bold text-[#2A2A2A] text-lg mb-2">Gratidão pela dedicação</h4>
               <p className="text-[#4A4A4A] leading-relaxed flex-grow">
-                A senhora merece todo o nosso carinho, doutora. Agradecemos a Deus por ter você ao nosso lado.
+                "A senhora merece todo o nosso carinho, doutora. Agradecemos a Deus por ter você ao nosso lado."
               </p>
             </div>
           </motion.div>
